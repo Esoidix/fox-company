@@ -148,19 +148,6 @@
             </div>
         </div>
 
-        <div class="rating-section">
-            <h3>Оцените наш сайт</h3>
-            <div class="rating-stars">
-                <span class="star" data-value="1">☆</span>
-                <span class="star" data-value="2">☆</span>
-                <span class="star" data-value="3">☆</span>
-                <span class="star" data-value="4">☆</span>
-                <span class="star" data-value="5">☆</span>
-            </div>
-            <p class="rating-text">Ваша оценка: <span id="selected-rating">0</span>/5</p>
-            <button class="fox-btn submit-rating">Отправить</button>
-        </div>
-        
         <!-- Карточки действий -->
         <div class="action-grid">
             <!-- Карточка вступления -->
@@ -742,82 +729,6 @@ color: #FF7F00;
 </style>
 
 <script>
-    // Система оценок
-    const stars = document.querySelectorAll('.star');
-    const ratingText = document.getElementById('selected-rating');
-    let selectedRating = 0;
-
-    stars.forEach(star => {
-        star.addEventListener('click', () => {
-            selectedRating = star.getAttribute('data-value');
-            ratingText.textContent = selectedRating;
-            
-            // Подсветка выбранных звезд
-            stars.forEach((s, i) => {
-                s.classList.toggle('active', i < selectedRating);
-            });
-        });
-    });
-
-    // Отправка оценки (заглушка)
-    document.querySelector('.submit-rating').addEventListener('click', () => {
-        if(selectedRating > 0) {
-            alert(`Спасибо за оценку ${selectedRating} из 5!`);
-            // Здесь можно добавить отправку на сервер
-        } else {
-            alert('Пожалуйста, выберите оценку!');
-        }
-    });
-
-    // Проверка localStorage при загрузке
-document.addEventListener('DOMContentLoaded', () => {
-    const savedRating = localStorage.getItem('foxCompanyRating');
-    if(savedRating) {
-        selectedRating = savedRating;
-        ratingText.textContent = savedRating;
-        stars.forEach((s, i) => {
-            s.classList.toggle('active', i < savedRating);
-        });
-    }
-});
-
-// Изменение в обработчике отправки
-document.querySelector('.submit-rating').addEventListener('click', () => {
-    if(selectedRating > 0) {
-        localStorage.setItem('foxCompanyRating', selectedRating);
-        alert(`Спасибо! Ваша оценка ${selectedRating} сохранена.`);
-    }
-});
-
-document.querySelector('.submit-rating').addEventListener('click', () => {
-  if(selectedRating > 0) {
-    fetch('/api/ratings', { 
-      method: 'POST',
-      body: JSON.stringify({ rating: selectedRating })
-    });
-  }
-});
-
-document.getElementById('tg-rating-btn').addEventListener('click', async () => {
-    if(selectedRating === 0) {
-        alert('Сначала выберите оценку!');
-        return;
-    }
-
-    const botToken = '7839208512:AAFK7zOoXHoIJ36ZVqR9duq6UzffGIvouoo'; // Например: '6123456789:AAFm...'
-    const chatId = '-1007839208512'; // Например: '123456789'
-    const message = `🦊 Новая оценка FoX Company: ${selectedRating}/5\n` + 
-                   `🌐 Страница: ${window.location.href}\n` +
-                   `📅 Дата: ${new Date().toLocaleString()}`;
-
-    try {
-        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
-        alert('✅ Ваша оценка отправлена!');
-    } catch (error) {
-        alert('❌ Ошибка. Попробуйте позже.');
-        console.error(error);
-    }
-});
 
 </script>
 
