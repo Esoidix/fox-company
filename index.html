@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <base href="https://fox-company-vtc.ru">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoX Company - Главная</title>
+    <style>
+        :root {
+            --primary: #FF7F00;
+            --primary-dark: #CC5500;
+            --background: #ffffff;
+            --text: #333333;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: var(--primary-dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Секция героя */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            border: 2px solid var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+        }
+
+        /* Секция о компании */
+        .about-section {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Статистика */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .stat-card {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Секция конвоев */
+        .convoy-section {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .convoy-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .convoy-item {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary);
+            background-color: #FFF8F0;
+        }
+
+        /* Секция спонсоров */
+        .sponsors-section {
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FoX Company</h1>
+    </header>
+
+<nav>
+        <ul>
+            <li><a href="#main">Главная</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#convoy">Конвои</a></li>
+            <li><a href="#stats">Статистика</a></li>
+            <li><a href="#sponsors">Спонсоры</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Главная секция -->
+        <section class="hero" id="main">
+            <h2>Добро пожаловать в FoX Company!</h2>
+            <p>Заинтересованы? Присоединяйтесь к нам!</p>
+            <div class="hero-buttons">
+                <a href="https://truckersmp.com/vtc/78975" class="btn btn-primary">ВСТУПИТЬ</a>
+                <a href="https://discord.gg/jVrvJSf4" class="btn btn-secondary">DISCORD</a>
+            </div>
+        </section>
+
+        <!-- О компании -->
+        <section class="about-section" id="about">
+            <h2>О нас</h2>
+            <p>FoX Company - это верифицированная и полностью русскоязычная виртуальная транспортная компания, наполненная большими идеями и успешной реализацией.</p>
+            <li> Мы работаем с Апреля 2025 года, и за это время мы успешно провели множество конвоев с тщательной организацией.</li>
+            <li> Наша активная компания насчитывает 1 сотрудника.</li>
+            <li> У нас в компании вы найдете мощную технологическую систему, готовую взаимодействовать с вами и способствовать вашему развитию. Мы гордимся красивым дизайном нашего стиля. Наш коллектив включает в себя выдающихся специалистов, администрацию с богатым опытом и отзывчивым отношением к каждому водителю. Присоединившись к нашей компании, вы получите богатый опыт и насладитесь множеством эмоций от участия в крупных мероприятиях! Даже если у вас нет опыта в игре, не переживайте! Мы с удовольствием поможем вам освоить все необходимые навыки и достичь заслуженной роли "Опытного водителя". Присоединяйтесь к FoX Company и давайте вместе создадим захватывающее и успешное будущее в мире виртуальных грузоперевозок!</li></p>
+        </section>
+
+        <!-- Конвои -->
+        <section class="convoy-section" id="convoy">
+            <h2>Ближайшие конвои</h2>
+            <ul class="convoy-list">
+                <li class="convoy-item">
+                    <h3>-</h3>
+                    <p>Дата: -</p>
+                    <p>Время парковки: -</p>
+                    <p>Время выезда: -</p>
+                    <p>Место парковки: -</p>
+                    <p>Место прибытия: -</p>
+                    <p>DLC: None</p>
+                    <p>Сервер: -</p>
+                    <p>Дистанция: -</p>
+                </li>
+                <!-- Добавьте другие конвои по аналогии -->
+            </ul>
+        </section>
+
+        <!-- Статистика -->
+        <div class="stats-grid" id="stats">
+            <div class="stat-card">
+                <h3>0 км</h3>
+                <p>Пройдено расстояние</p>
+            </div>
+            <div class="stat-card">
+                <h3>0</h3>
+                <p>Завершённых доставок</p>
+            </div>
+            <div class="stat-card">
+                <h3>1</h3>
+                <p>Участников компании</p>
+            </div>
+        </div>
+
+        <!-- Спонсоры -->
+        <section class="sponsors-section" id="sponsors">
+            <h2>Наши спонсоры</h2>
+            <div class="sponsors-grid">
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <!-- Добавьте других спонсоров -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 FoX Company. Все права защищены.</p>
+    </footer>
+</body>
+</html>
