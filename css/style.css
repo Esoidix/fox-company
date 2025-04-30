@@ -193,4 +193,72 @@ h2 {
     .hero-content h1 {
         font-size: 2.5rem;
     }
+
+    .social-buttons {
+        display: flex;
+        gap: 15px;
+        margin: 20px 0;
+      }
+      
+      .social-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.3s;
+      }
+      
+      .social-btn:hover {
+        transform: translateY(-3px);
+      }
+      
+      /* Цвета кнопок */
+      .twitch { background: #9147ff; }
+      .vk { background: #0077ff; }
+      .discord { background: #5865F2; }
+      
+      /* Иконки (размер) */
+      .social-btn img {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* Статистика */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: #FF7F20;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Спонсоры/партнёры */
+        .sponsors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .sponsors-grid img {
+            max-height: 80px;
+            filter: grayscale(0%);
+            transition: all 0.3s;
+        }
+
+        .sponsors-grid img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
 }
