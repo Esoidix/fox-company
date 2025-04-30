@@ -164,6 +164,31 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Страница входа -->
+        <div id="login" class="page">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <h2>Вход в систему</h2>
+                    </div>
+                    
+                    <form class="login-form">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="email@example.com" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="password">Пароль</label>
+                            <input type="password" id="password" placeholder="••••••••" required>
+                        </div>
+                        
+                        <button type="submit" class="fox-btn">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
             
             <!-- Карточка конвоев -->
             <div class="fox-card action-card">
@@ -609,6 +634,61 @@ color: #FF7F00;
     .partner-btn:hover {
         background: #CC5500;
     }
+
+    /* Стили формы входа */
+    .login-container {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .login-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            border-top: 4px solid var(--fox-orange);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .login-header h2 {
+            color: var(--fox-orange);
+            text-align: center;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background: #333;
+            color: white;
+        }
+        
+        .fox-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, var(--fox-orange), var(--fox-dark));
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1.5rem;
+        }
+        
+        .fox-btn:hover {
+            background: linear-gradient(to right, var(--fox-dark), var(--fox-orange));
+        }
 
 </style>
 
